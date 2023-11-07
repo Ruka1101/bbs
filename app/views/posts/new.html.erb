@@ -3,11 +3,11 @@
 <%= form_with model: @post, html: {class: "form-container"} do |form| %>
     <div class="form-input">
         <%= form.label :title %>
-        <%= form.text_field :title %>
+        <%= form.text_field :title, placeholder: title_placeholder %>
     </div>
     <div class="form-input">
         <%= form.label :content %>
-        <%= form.text_area :content %>
+        <%= form.text_area :content, placeholder: content_placeholder %>
     </div>
     <div class="button-container">
         <%= form.submit "投稿", class: "link-button" %>
