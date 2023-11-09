@@ -1,18 +1,23 @@
 class PostsController < ApplicationController
     before_action :set_post, only: [:edit, :update, :destroy]
 
+    # GET /
     # GET /posts
-    # POSt /posts
     def index
         @posts = Post.all
     end
 
-    # GET /posts/:id/edit
+    # GET /posts/:id
+    def show
+        @post = Post.find(params[:id])
+    end
+
+    # GET /posts/new
     def new
         @post = Post.new
     end
 
-    # GET /posts/new
+    # POST /posts
     def create
         @post = Post.new(post_params)
         @post.user_id = current_user.id
@@ -25,12 +30,12 @@ class PostsController < ApplicationController
         end
     end
 
-    # PATCH /posts/:id
+    # GET /posts/:id/edit
     def edit 
     end
 
+    # PATCH /posts/:id
     # PUT /posts/:id
-    # DELETE /posts/:id
     def update
         if @post.user_id == current_user.id
             if @post.update(post_params)
@@ -43,6 +48,7 @@ class PostsController < ApplicationController
         end
     end
 
+    # DELETE /posts/:id
     def destroy
         if @post.user_id == current_user.id
             @post.destroy
