@@ -42,6 +42,15 @@ body {
   .button-container {
     text-align: center;
   }
+
+  .left, .right {
+    display: inline-block;
+  }
+
+  .frame {
+    display: flex;
+    justify-content: space-between;
+  }
   
   .form-container {
     display: flex;
