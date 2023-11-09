@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-    before_action :set_post, only: [:edit, :update, :destroy]
+    before_action :set_post, only: [:show, :edit, :update, :destroy]
 
     # GET /
     # GET /posts
@@ -9,7 +9,6 @@ class PostsController < ApplicationController
 
     # GET /posts/:id
     def show
-        @post = Post.find(params[:id])
     end
 
     # GET /posts/new

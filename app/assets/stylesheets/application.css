@@ -78,7 +78,7 @@ body {
     border-radius: 5px;
   }
   
-  .link-button {
+  /* .link-button {
     display: inline-block;
     background-color: #007bff;
     color: #fff;
@@ -87,9 +87,9 @@ body {
     border-radius: 5px;
     text-align: center;
     cursor: pointer;
-  }
+  } */
   
-  .link-delete-button {
+  /* .link-delete-button {
     display: inline-block;
     background-color: #cc361f;
     font-size: 17px;
@@ -101,9 +101,9 @@ body {
     margin-left: 10px;
     border: 1px solid;
     cursor: pointer;
-  }
+  } */
   
-  .edit-delete-wrapper {
+  /* .edit-delete-wrapper {
     display: flex;
     margin-top: 10px;
-  }
+  } */
