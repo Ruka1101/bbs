@@ -42,8 +42,6 @@ class PostsController < ApplicationController
             else
                 render :edit
             end
-        else
-            redirect_to posts_path, notice: "編集権限がありません。"
         end
     end
 
@@ -52,7 +50,6 @@ class PostsController < ApplicationController
         if @post.user_id == current_user.id
             @post.destroy
             redirect_to posts_path, status: :see_other, notice: "投稿を削除しました。"
-            redirect_to posts_path, status: :see_other, notice: "削除権限がありません。"
         end
     end
 
