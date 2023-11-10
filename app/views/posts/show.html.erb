@@ -10,7 +10,7 @@
             </div>
         </div>
         <p><%= @post.content %></p><br>
-        <%= image_tag @post.board_image.url, size: '300x200' %>
+        <%= image_tag post.board_image.url, class: 'card-img-top' size: '300x200' %>
         <span>
             <small><%= @post.created_at.strftime('%Y年%m月%d日 %H時%M分') %></small><br>
             <small><%= @post.user.name %></small>

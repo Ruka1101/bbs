@@ -86,7 +86,15 @@ body {
     border: 1px solid #ddd;
     border-radius: 5px;
   }
-  
+
+  .form-file-uploader {
+    width: 80%;
+  }
+
+  #post_board_image {
+    padding-top: 10px;
+  }
+
   /* .link-button {
     display: inline-block;
     background-color: #007bff;
