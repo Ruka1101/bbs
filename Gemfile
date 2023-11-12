@@ -70,3 +70,5 @@ end
 gem 'devise'
 
 gem 'carrierwave'
+
+gem 'jquery-rails'
