@@ -25,7 +25,7 @@ class PostsController < ApplicationController
         if @post.save
             redirect_to posts_path
         else
-            render :new
+            redirect_to action: :new
         end
     end
 
@@ -55,7 +55,7 @@ class PostsController < ApplicationController
 
     private
     def post_params
-        params.require(:post).permit(:title, :content, :board_image, :board_image_cache)
+        params.require(:post).permit(:title, :kind, :date_and_time, :content, :board_image, :board_image_cache, :place)
     end
 
     def set_post
