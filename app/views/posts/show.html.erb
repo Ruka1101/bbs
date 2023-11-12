@@ -1,19 +1,29 @@
 <ul>
     <li>
         <div class="frame">
-            <h2 class="left"><%= @post.title %></h2>
-            <div class="right">           
+            <h2 class="title"><%= @post.title %></h2>
+            <div class="edit-delete">           
                 <% if @post.user_id == current_user.id %>                
                     <%= link_to "編集", edit_post_path(@post) %>
                     <%= link_to "削除", post_path(@post), data: {turbo_method: :delete, turbo_confirm: '投稿を削除しますか？'} %>  
                 <% end %>
             </div>
         </div>
-        <p><%= @post.content %></p><br>
-        <%= image_tag @post.board_image.url, size: '300x200' %>
-        <span>
-            <small><%= @post.created_at.strftime('%Y年%m月%d日 %H時%M分') %></small><br>
-            <small><%= @post.user.name %></small>
-        </span>
+        <div class="content">
+            <p><%= @post.content %></p><br>
+        </div>
+        <div class="cat_image">
+              <%= image_tag @post.board_image.url %><br>
+        </div>
+        <div class="date_and_time">
+            <span>
+                <small><%= @post.created_at.strftime('%Y年%m月%d日 %H時%M分') %></small><br>
+            </span>
+        </div>
+        <div>
+            <span>
+                <small><%= @post.user.name %></small>
+            </span>
+        </div>
     </li>   
 </ul>

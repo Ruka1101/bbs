@@ -52,6 +52,15 @@ ul li p {
   justify-content: space-between;
 }
 
+.content p {
+  word-break: break-all;
+}
+
+.cat_image img {
+  display: inline-block;
+  width: 100%;
+}
+
 .form-container {
   display: flex;
   flex-direction: column;
