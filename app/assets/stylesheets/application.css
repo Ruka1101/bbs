@@ -104,6 +104,10 @@ ul li p {
   padding-top: 10px;
 }
 
+#preview {
+  padding: 10px 100px 0 0;
+}
+
 /* .link-button {
   display: inline-block;
   background-color: #007bff;
