@@ -9,13 +9,23 @@
                 <% end %>
             </div>
         </div>
+        <div class="kind">
+            <p><%= "種類: " + @post.kind %></p><br>
+        </div>
+        <div class="date_and_time">
+            <p><%= "発見日時: " + @post.date_and_time %></p><br>
+        </div>
         <div class="content">
+            <p>詳細</p><br>
             <p><%= @post.content %></p><br>
         </div>
         <div class="cat_image">
               <%= image_tag @post.board_image.url %><br>
         </div>
-        <div class="date_and_time">
+        <div class="place">
+            <p><%= "発見場所: " + @post.place %></p><br>
+        </div>
+        <div class="created_at">
             <span>
                 <small><%= @post.created_at.strftime('%Y年%m月%d日 %H時%M分') %></small><br>
             </span>
