@@ -1,4 +1,9 @@
 <h1>迷子猫情報</h1>
+<%= form_tag('/posts', method: 'get') do %>
+<%= label_tag(:place_key, 'Search place:') %>
+<%= text_field_tag(:place_key) %>
+<%= submit_tag('検索') %>
+<%= link_to 'クリア', post_path %><br>
 
 <div class="button-container">
     <%= link_to "新しい投稿", new_post_path, class: "link-button" %>
