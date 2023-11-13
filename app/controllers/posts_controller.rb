@@ -4,7 +4,11 @@ class PostsController < ApplicationController
     # GET /
     # GET /posts
     def index
-        @posts = Post.all
+        if params[:place_key]
+            @posts = Post.where('place LIKE ?', "%#{params[:place_key]}%")
+        else
+            @posts = Post.all
+        end
     end
 
     # GET /posts/:id

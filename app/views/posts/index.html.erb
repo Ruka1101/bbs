@@ -1,12 +1,17 @@
 <h1>迷子猫情報</h1>
-<%= form_tag('/posts', method: 'get') do %>
-<%= label_tag(:place_key, 'Search place:') %>
-<%= text_field_tag(:place_key) %>
-<%= submit_tag('検索') %>
-<%= link_to 'クリア', post_path %><br>
 
 <div class="button-container">
     <%= link_to "新しい投稿", new_post_path, class: "link-button" %>
+</div>
+
+<div class="search-place">
+    <%= form_tag('/posts', method: 'get') do %>
+    <%= label_tag(:place_key, '発見場所検索:') %>
+    <%= text_field_tag(:place_key) %>
+    <%= submit_tag('検索') %>
+    <%= link_to 'クリア', posts_path %>
+    <% end %>
+    <br>
 </div>
 
 <ul>
@@ -24,8 +29,8 @@
             </div>
             <span>
                 <small><%= post.place %></small><br>
-                <small><%= post.created_at.strftime('%Y年%m月%d日 %H時%M分') %></small><br>
-                <small><%= post.user.name %></small>
+                <small><%= "投稿日時: " + post.created_at.strftime('%Y年%m月%d日 %H時%M分') %></small><br>
+                <small><%= "投稿者: " + post.user.name %></small>
             </span>
         </li>
     <% end %>

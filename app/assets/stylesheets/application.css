@@ -43,6 +43,11 @@ ul li p {
   text-align: center;
 }
 
+.search-place {
+  text-align: center;
+  padding-top: 20px;
+}
+
 .left, .right {
   display: inline-block;
 }
@@ -52,6 +57,10 @@ ul li p {
   justify-content: space-between;
 }
 
+.line-height {
+  line-height: 15px;
+}
+
 .content p {
   word-break: break-all;
 }
@@ -59,6 +68,7 @@ ul li p {
 .cat_image img {
   display: inline-block;
   width: 100%;
+  padding-bottom: 15px;
 }
 
 .form-container {

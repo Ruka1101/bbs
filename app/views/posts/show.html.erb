@@ -9,30 +9,30 @@
                 <% end %>
             </div>
         </div>
-        <div class="kind">
+        <div class="kind line-height">
             <p><%= "種類: " + @post.kind %></p><br>
         </div>
-        <div class="date_and_time">
+        <div class="date_and_time line-height">
             <p><%= "発見日時: " + @post.date_and_time %></p><br>
         </div>
-        <div class="content">
-            <p>詳細</p><br>
+        <div class="content line-height">
+            <p>詳細:</p><br>
             <p><%= @post.content %></p><br>
         </div>
         <div class="cat_image">
               <%= image_tag @post.board_image.url %><br>
         </div>
-        <div class="place">
+        <div class="place line-height">
             <p><%= "発見場所: " + @post.place %></p><br>
         </div>
         <div class="created_at">
             <span>
-                <small><%= @post.created_at.strftime('%Y年%m月%d日 %H時%M分') %></small><br>
+                <small><%= "投稿日時: " + @post.created_at.strftime('%Y年%m月%d日 %H時%M分') %></small><br>
             </span>
         </div>
         <div>
             <span>
-                <small><%= @post.user.name %></small>
+                <small><%= "投稿者: " + @post.user.name %></small>
             </span>
         </div>
     </li>   
