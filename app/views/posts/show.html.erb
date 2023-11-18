@@ -35,8 +35,10 @@
                 <small><%= "投稿者: " + @post.user.name %></small>
             </span>
         </div>
-        <div class="button-container" id="message-button">
-            <%= link_to '投稿者にメッセージを送る', new_messages_path, class: "link-button" %>
-        </div>
+        <% if @post.user_id != current_user.id %>
+            <div class="button-container" id="message-button">
+                <%= link_to '投稿者にメッセージを送る', new_messages_path, class: "link-button" %>
+            </div>
+        <% end %>
     </li>
 </ul>
