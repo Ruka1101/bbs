@@ -35,5 +35,8 @@
                 <small><%= "投稿者: " + @post.user.name %></small>
             </span>
         </div>
-    </li>   
+        <div class="button-container" id="message-button">
+            <%= link_to '投稿者にメッセージを送る', new_messages_path, class: "link-button" %>
+        </div>
+    </li>
 </ul>

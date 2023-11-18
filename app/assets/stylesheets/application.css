@@ -129,6 +129,10 @@ ul li p {
   cursor: pointer;
 }
 
+#message-button {
+  padding-top: 30px;
+}
+
 /* .link-delete-button {
   display: inline-block;
   background-color: #cc361f;

@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get '/posts/new' => 'posts#new'
   get '/posts/:id' => 'posts#show', as: 'show_post'
   delete '/posts/:id' => 'posts#destroy'
+  get '/posts/:id/new' => 'messages#new', as: 'new_messages'
+  post '/posts/:id/new' => 'messages#create', as: 'messages'
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
   # Can be used by load balancers and uptime monitors to verify that the app is live.

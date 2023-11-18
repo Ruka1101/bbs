@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_11_12_163158) do
+ActiveRecord::Schema[7.1].define(version: 2023_11_18_090351) do
   create_table "articles", force: :cascade do |t|
     t.integer "user_id"
     t.string "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.string "sender_name", null: false
+    t.string "sender_email", null: false
+    t.string "receiver_name", null: false
+    t.string "receiver_email", null: false
+    t.string "subject", null: false
+    t.string "content", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -28,6 +39,8 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_12_163158) do
     t.string "kind", null: false
     t.string "date_and_time", null: false
     t.string "place", null: false
+    t.float "latitude"
+    t.float "longitude"
   end
 
   create_table "users", force: :cascade do |t|

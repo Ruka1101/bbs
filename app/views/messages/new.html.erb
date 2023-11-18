@@ -1,0 +1,23 @@
+<h1>メッセージ送信</h1>
+
+<%= form_with model:@message, html: {class: "form-container"} do |f| %>
+    <div class="form-input">
+        <%= f.label :sender_name,"氏名" %>
+        <%= f.text_field :sender_name, placeholder: "例：山田 花子" %>
+    </div>
+    <div class="form-input">
+        <%= f.label :sender_email,"メールアドレス" %>
+        <%= f.text_field :sender_email, placeholder: "例：example@gmail.co.jp" %>
+    </div>
+    <div class="form-input">
+        <%= f.label :subject,"件名" %>
+        <%= f.text_field :subject, placeholder: "例：本投稿のキジトラについて" %>
+    </div>
+    <div class="form-input text-area-content">
+        <%= f.label :content,"本文" %>
+        <%= f.text_area :content, placeholder: message_content_placeholder %>
+    </div>
+    <div class="button-container">
+        <%= f.submit "送信", class: "link-button" %>
+    </div>
+<% end %>
