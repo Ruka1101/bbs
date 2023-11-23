@@ -4,8 +4,9 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1><%= @message.receiver_name %> 様</h1>
+    <p><%= @message.receiver_name %> 様</p>
     <p><%= @message.content %></p>
+    <p><%= "email: " + @message.sender_email %></p>
     <p><%= @message.sender_name %></p>
   </body>
 </html>
