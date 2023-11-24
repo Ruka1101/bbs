@@ -2,7 +2,7 @@
 
 <%= form_with model:@message, html: {class: "form-container"} do |f| %>
     <div class="form-input">
-        <%= f.label :sender_name,"氏名" %>
+        <%= f.label :sender_name,"名字（本文末尾に記載されます）" %>
         <%= f.text_field :sender_name, placeholder: "例：山田 花子" %>
     </div>
     <div class="form-input">

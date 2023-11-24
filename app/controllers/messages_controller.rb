@@ -10,6 +10,7 @@ class MessagesController < ApplicationController
         @post = Post.find(params[:id])
         @message.receiver_name = @post.user.name
         @message.receiver_email = @post.user.email
+        @message.post_id = @post.id
         @message.save
         
         if @message.save
