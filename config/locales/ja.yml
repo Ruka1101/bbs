@@ -33,8 +33,9 @@ ja:
       not_saved: "更新に失敗しました。"
   devise:
     failure:
-      already_authenticated: '既にログインしています。'
-      unauthenticated: 'ログインしてください。'
+      already_authenticated: "既にログインしています。"
+      unauthenticated: "ログインしてください。"
+      invalid: "ユーザー情報に誤りがあります。"
     passwords:
       user:
         send_instructions: "パスワード再設定用のメールを送信しました。"
@@ -66,10 +67,11 @@ ja:
         user_name: "ユーザー名"
         password: "パスワード(6文字以上)"
         password_confirmation: "パスワード確認"
-
     sessions:
-      signed_in: ""
-      signed_out: "ログアウトしました。"
+      user: 
+        signed_in: ""
+        signed_out: "ログアウトしました。"
+        already_signed_out: "既にログアウトしています。"
       new:
         login: "ログイン"
         email: "メールアドレス"

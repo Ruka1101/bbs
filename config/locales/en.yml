@@ -35,6 +35,7 @@ en:
     failure:
       already_authenticated: 'You are already logged in.'
       unauthenticated: 'Login first.'
+      invalid: "User information is wrong."
     passwords:
       user:
         send_instructions: "Sent email to change your password."
@@ -115,8 +116,10 @@ en:
         password: "Password (6 characters minimum)"
         password_confirmation: "Password"
     sessions:
-      signed_in: ""
-      signed_out: "Logout successfully."
+      user:
+        signed_in: ""
+        signed_out: "Logout successfully."
+        already_signed_out: "You have already signed out."
       new:
         login: "Login"
         email: "Email"
