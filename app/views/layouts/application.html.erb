@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>迷子猫掲示板 Meow</title>
+    <title><%= t('.title') %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,9 +12,9 @@
 
   <body>
     <% if user_signed_in? %>
-      Logged in as <strong><%= current_user.name %></strong><br>
-      <%= link_to "Settings", edit_user_registration_path %><br>
-      <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+      <%= t('.login_user') %><strong><%= current_user.name %></strong><br>
+      <%= link_to t('.update_user_infomation'), edit_user_registration_path %><br>
+      <%= link_to t('.logout'), destroy_user_session_path, method: :delete %>
     <% end %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>

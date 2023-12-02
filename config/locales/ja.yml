@@ -1,0 +1,94 @@
+# Files in the config/locales directory are used for internationalization and
+# are automatically loaded by Rails. If you want to use locales other than
+# English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t "hello"
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t("hello") %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more about the API, please read the Rails Internationalization guide
+# at https://guides.rubyonrails.org/i18n.html.
+#
+# Be aware that YAML interprets the following case-insensitive strings as
+# booleans: `true`, `false`, `on`, `off`, `yes`, `no`. Therefore, these strings
+# must be quoted to be interpreted as strings. For example:
+#
+#     en:
+#       "yes": yup
+#       enabled: "ON"
+
+ja:
+  devise:
+    passwords:
+      new:
+        forgot_password: "パスワードをお忘れですか？"
+        email: "メールアドレス"
+        reset_password: "パスワードをリセットする"
+    registrations:
+      edit:
+        update_user_info: "ユーザー情報更新"
+        email: "メールアドレス"
+        user_name: "ユーザー名"
+        password: "パスワード（変更しない場合は空白にしてください）"
+        minimum_password_length: "文字以上で設定してください"
+        password_confirmation: "パスワード確認"
+        current_password: "現在のパスワード"
+        update: "更新"
+        delete_user: "ユーザー削除"
+        delete_user_message: "以下のボタンを押すとユーザーが削除されます。"
+        back: "戻る"
+      new:
+        signup: "新規登録"
+        email: "メールアドレス"
+        user_name: "ユーザー名"
+        password: "パスワード(6文字以上)"
+        password_confirmation: "パスワード確認"
+    sessions:
+      signed_in: ""
+      signed_out: "ログアウトしました。"
+      new:
+        login: "ログイン"
+        email: "メールアドレス"
+        password: "パスワード"
+        remember_me: "ユーザー情報を記憶する"
+    shared:
+      links:
+        login: "ログイン"
+        signup: "新規登録"
+        forgot_password: "パスワードをお忘れですか？"
+  
+  layouts:
+    application:
+      title: "迷子猫掲示板 Meow"
+      login_user: "ログインしました："
+      update_user_infomation: "ユーザー情報更新"
+      logout: "ログアウト"
+
+  posts:
+    index:
+      lost_cat: "迷子猫情報"
+      new_post_index: "新しい投稿"
+      search_found_location: "発見場所検索:"
+      search: "検索"
+      clear: "クリア"
+    new:
+      new_post_new: "新しい投稿"
+      title: "タイトル"
+      kind: "種類"
+      found_date_and_time: "発見日時"
+      details: "詳細"
+      image: "画像"
+      found_location: "発見場所"
+
+    
+    

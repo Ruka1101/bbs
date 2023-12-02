@@ -1,15 +1,15 @@
-<h1>迷子猫情報</h1>
+<h1><%= t '.lost_cat' %></h1>
 
 <div class="button-container">
-    <%= link_to "新しい投稿", new_post_path, class: "link-button" %>
+    <%= link_to t('.new_post_index'), new_post_path, class: "link-button" %>
 </div>
 
 <div class="search-place">
     <%= form_tag('/posts', method: 'get') do %>
-    <%= label_tag(:place_key, '発見場所検索:') %>
+    <%= label_tag(:place_key, t('.search_found_location')) %>
     <%= text_field_tag(:place_key) %>
-    <%= submit_tag('検索') %>
-    <%= link_to 'クリア', posts_path %>
+    <%= submit_tag(t('.search')) %>
+    <%= link_to t('.clear'), posts_path %>
     <% end %>
     <br>
 </div>
