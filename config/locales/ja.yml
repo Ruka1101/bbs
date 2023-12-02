@@ -28,12 +28,71 @@
 #       enabled: "ON"
 
 ja:
+  errors:
+    messages:
+      not_saved: "更新に失敗しました。"
   devise:
+    failure:
+      already_authenticated: '既にログインしています。'
+      unauthenticated: 'ログインしてください。'
+    passwords:
+      user:
+        send_instructions: "パスワード再設定用のメールを送信しました。"
+        updated: "パスワードを変更しました。"
+      new:
+        forgot_password: "パスワードをお忘れですか？"
+        email: "メールアドレス"
+        reset_password: "パスワードをリセットする"
+    registrations:
+      user:
+        signed_up: "ユーザーを登録しました。"
+        destroyed: "ユーザーを削除しました。"
+        updated: "ユーザー情報をを更新しました。"
+      edit:
+        update_user_info: "ユーザー情報更新"
+        email: "メールアドレス"
+        user_name: "ユーザー名"
+        password: "パスワード（変更しない場合は空白にしてください）"
+        minimum_password_length: "文字以上で設定してください。"
+        password_confirmation: "パスワード確認"
+        current_password: "現在のパスワード"
+        update: "更新"
+        delete_user: "ユーザー削除"
+        delete_user_message: "以下のボタンを押すとユーザーが削除されます。"
+        back: "戻る"
+      new:
+        signup: "新規登録"
+        email: "メールアドレス"
+        user_name: "ユーザー名"
+        password: "パスワード(6文字以上)"
+        password_confirmation: "パスワード確認"
+
+    sessions:
+      signed_in: ""
+      signed_out: "ログアウトしました。"
+      new:
+        login: "ログイン"
+        email: "メールアドレス"
+        password: "パスワード"
+        remember_me: "ユーザー情報を記憶する"
+    shared:
+      links:
+        login: "ログイン"
+        signup: "新規登録"
+        forgot_password: "パスワードをお忘れですか？"
+
+  users:
     passwords:
       new:
         forgot_password: "パスワードをお忘れですか？"
         email: "メールアドレス"
         reset_password: "パスワードをリセットする"
+      edit:
+        change_password: "パスワード変更"
+        new_password: "新しいパスワード"
+        minimum_password_length: "文字以上"
+        confirm_new_password: "新しいパスワード確認"
+        change_password: "パスワードを変更する"
     registrations:
       edit:
         update_user_info: "ユーザー情報更新"
@@ -47,6 +106,7 @@ ja:
         delete_user: "ユーザー削除"
         delete_user_message: "以下のボタンを押すとユーザーが削除されます。"
         back: "戻る"
+        confirm_delete: "ユーザーを削除しますか？"
       new:
         signup: "新規登録"
         email: "メールアドレス"
@@ -66,7 +126,7 @@ ja:
         login: "ログイン"
         signup: "新規登録"
         forgot_password: "パスワードをお忘れですか？"
-  
+        
   layouts:
     application:
       title: "迷子猫掲示板 Meow"
