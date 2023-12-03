@@ -76,3 +76,7 @@ gem 'jquery-rails'
 gem 'dotenv-rails'
 
 gem 'rails-i18n'
+
+gem 'geocoder'
+
+gem 'gmaps4rails'

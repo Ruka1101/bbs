@@ -1,4 +1,7 @@
 class Post < ApplicationRecord
+    geocoded_by :place
+    after_validation :geocode
+
     mount_uploader :board_image, BoardImageUploader
     has_many :messages, dependent: :destroy
     belongs_to :user

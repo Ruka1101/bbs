@@ -2,36 +2,36 @@
 
 <h1><%= t('.new_post_new') %></h1>
 
-<%= form_with model: @post, local: true, html: {class: "form-container"} do |form| %>
+<%= form_with model: @post, local: true, html: {class: "form-container"} do |f| %>
     <div class="form-input">
-        <%= form.label :title, t('.title') %>
-        <%= form.text_field :title, placeholder: "例：キジトラを保護しました" %>
+        <%= f.label :title, t('.title') %>
+        <%= f.text_field :title, placeholder: "例：キジトラを保護しました" %>
     </div>
     <div class="form-input">
-        <%= form.label :kind, t('.kind') %>
-        <%= form.text_field :kind, placeholder: "例：キジトラ" %>
+        <%= f.label :kind, t('.kind') %>
+        <%= f.text_field :kind, placeholder: "例：キジトラ" %>
     </div>
     <div class="form-input">
-        <%= form.label :date_and_time, t('.found_date_and_time') %>
-        <%= form.text_field :date_and_time, placeholder: "例：2023/11/8 19時ごろ" %>
+        <%= f.label :date_and_time, t('.found_date_and_time') %>
+        <%= f.text_field :date_and_time, placeholder: "例：2023/11/8 19時ごろ" %>
     </div>
     <div class="form-input text-area-content">
-        <%= form.label :content, t('.details') %>
-        <%= form.text_area :content, placeholder: content_placeholder %>
+        <%= f.label :content, t('.details') %>
+        <%= f.text_area :content, placeholder: content_placeholder %>
     </div>
     <div class="form-file-uploader">
-        <%= form.label :board_image, t('.image')  %><br>
-        <%= form.file_field :board_image, accept: 'image/*', onchange: 'previewImage(preview)' %>
-        <%= form.hidden_field :board_image_cache %>
+        <%= f.label :board_image, t('.image')  %><br>
+        <%= f.file_field :board_image, accept: 'image/*', onchange: 'previewImage(preview)' %>
+        <%= f.hidden_field :board_image_cache %>
     </div>
     <div class="mt-3 mb-3">
         <%= image_tag @post.board_image.url, id: 'preview', size: '300x200' %>
     </div>
     <div class="form-input">
-        <%= form.label :place, t('.found_location') %>
-        <%= form.text_field :place, placeholder: "例：東京都新宿区西新宿〇丁目" %>
+        <%= f.label :place, t('.found_location') %>
+        <%= f.text_field :place, placeholder: "例：東京都新宿区西新宿〇丁目" %>
     </div>
     <div class="button-container">
-        <%= form.submit "投稿", class: "link-button" %>
+        <%= f.submit "投稿", class: "link-button" %>
     </div>
 <% end %>

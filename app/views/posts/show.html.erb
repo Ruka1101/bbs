@@ -25,6 +25,37 @@
         <div class="place line-height">
             <p><%= "発見場所: " + @post.place %></p><br>
         </div>
+
+        <div id='map'></div>
+        
+        <script>
+            function initMap(){
+              let mapPosition = { lat: <%= @post.latitude || 0 %>, lng: <%= @post.longitude || 0 %> };
+              let map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: mapPosition
+              });
+              let transitLayer = new google.maps.TransitLayer();
+              transitLayer.setMap(map);
+          
+              let contentString = '【住所】<%= @post.place %>';
+              let infowindow = new google.maps.InfoWindow({
+                content: contentString
+              });
+          
+              let marker = new google.maps.Marker({
+                position: mapPosition,
+                map: map,
+                title: contentString
+              });
+          
+              marker.addListener('click', function(){
+                infowindow.open(map, marker);
+              });
+            }
+            </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAP_API_KEY'] %>&callback=initMap" async defer></script>
+
         <div class="created_at">
             <span>
                 <small><%= "投稿日時: " + @post.created_at.strftime('%Y年%m月%d日 %H時%M分') %></small><br>
