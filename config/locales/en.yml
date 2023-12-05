@@ -36,6 +36,7 @@ en:
       already_authenticated: 'You are already logged in.'
       unauthenticated: 'Login first.'
       invalid: "User information is wrong."
+      not_found_in_database: "You have not registered yet."
     passwords:
       user:
         send_instructions: "Sent email to change your password."
