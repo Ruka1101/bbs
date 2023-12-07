@@ -2,7 +2,7 @@
 
 <h1><%= t('.new_post_new') %></h1>
 
-<%= form_with model: Post.new, url: posts_path,  local: true, html: {class: "form-container"} do |f| %>
+<%= form_with model: @post, url: posts_path,  local: true, html: {class: "form-container"} do |f| %>
     <div class="form-input">
         <%= f.label :title, t('.title') %>
         <%= f.text_field :title, placeholder: "例：キジトラを保護しました" %>
